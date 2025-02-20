@@ -1,8 +1,10 @@
 package eu.kanade.tachiyomi.source
 
 import android.content.Context
+import android.util.Log
 import eu.kanade.tachiyomi.data.download.DownloadManager
 import eu.kanade.tachiyomi.extension.ExtensionManager
+import eu.kanade.tachiyomi.source.online.komga.Komga
 import eu.kanade.tachiyomi.source.online.HttpSource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -57,7 +59,10 @@ class AndroidSourceManager(
                                 Injekt.get(),
                             ),
                         ),
-                    )
+                    ).apply{
+                        put(Komga().id, Komga())
+                        remove(LocalSource.ID)
+                    }
                     extensions.forEach { extension ->
                         extension.sources.forEach {
                             mutableMap[it.id] = it
@@ -85,6 +90,7 @@ class AndroidSourceManager(
     }
 
     override fun getOrStub(sourceKey: Long): Source {
+        Log.d("MihonDebug", "getOrStub: key $sourceKey")
         return sourcesMapFlow.value[sourceKey] ?: stubSourcesMap.getOrPut(sourceKey) {
             runBlocking { createStubSource(sourceKey) }
         }

@@ -9,5 +9,6 @@ class StoragePreferences(
     private val preferenceStore: PreferenceStore,
 ) {
 
-    fun baseStorageDirectory() = preferenceStore.getString(Preference.appStateKey("storage_dir"), folderProvider.path())
+//    fun baseStorageDirectory() = preferenceStore.getString(Preference.appStateKey("storage_dir"), folderProvider.path())
+    fun baseStorageDirectory() = preferenceStore.getString(folderProvider.path(), folderProvider.path())
 }

@@ -46,31 +46,31 @@ object SettingsBrowseScreen : SearchableSettings {
                         pref = sourcePreferences.hideInLibraryItems(),
                         title = stringResource(MR.strings.pref_hide_in_library_items),
                     ),
-                    Preference.PreferenceItem.TextPreference(
-                        title = stringResource(MR.strings.label_extension_repos),
-                        subtitle = pluralStringResource(MR.plurals.num_repos, reposCount, reposCount),
-                        onClick = {
-                            navigator.push(ExtensionReposScreen())
-                        },
-                    ),
+//                    Preference.PreferenceItem.TextPreference(
+//                        title = stringResource(MR.strings.label_extension_repos),
+//                        subtitle = pluralStringResource(MR.plurals.num_repos, reposCount, reposCount),
+//                        onClick = {
+//                            navigator.push(ExtensionReposScreen())
+//                        },
+//                    ),
                 ),
             ),
-            Preference.PreferenceGroup(
-                title = stringResource(MR.strings.pref_category_nsfw_content),
-                preferenceItems = persistentListOf(
-                    Preference.PreferenceItem.SwitchPreference(
-                        pref = sourcePreferences.showNsfwSource(),
-                        title = stringResource(MR.strings.pref_show_nsfw_source),
-                        subtitle = stringResource(MR.strings.requires_app_restart),
-                        onValueChanged = {
-                            (context as FragmentActivity).authenticate(
-                                title = context.stringResource(MR.strings.pref_category_nsfw_content),
-                            )
-                        },
-                    ),
-                    Preference.PreferenceItem.InfoPreference(stringResource(MR.strings.parental_controls_info)),
-                ),
-            ),
+//            Preference.PreferenceGroup(
+//                title = stringResource(MR.strings.pref_category_nsfw_content),
+//                preferenceItems = persistentListOf(
+//                    Preference.PreferenceItem.SwitchPreference(
+//                        pref = sourcePreferences.showNsfwSource(),
+//                        title = stringResource(MR.strings.pref_show_nsfw_source),
+//                        subtitle = stringResource(MR.strings.requires_app_restart),
+//                        onValueChanged = {
+//                            (context as FragmentActivity).authenticate(
+//                                title = context.stringResource(MR.strings.pref_category_nsfw_content),
+//                            )
+//                        },
+//                    ),
+//                    Preference.PreferenceItem.InfoPreference(stringResource(MR.strings.parental_controls_info)),
+//                ),
+//            ),
         )
     }
 }

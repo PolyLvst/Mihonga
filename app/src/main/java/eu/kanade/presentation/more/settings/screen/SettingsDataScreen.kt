@@ -156,14 +156,14 @@ object SettingsDataScreen : SearchableSettings {
 
         return Preference.PreferenceItem.TextPreference(
             title = stringResource(MR.strings.pref_storage_location),
-            subtitle = storageLocationText(storagePreferences.baseStorageDirectory()),
-            onClick = {
-                try {
-                    pickStorageLocation.launch(null)
-                } catch (e: ActivityNotFoundException) {
-                    context.toast(MR.strings.file_picker_error)
-                }
-            },
+            subtitle = "Internal app data",
+//            onClick = {
+//                try {
+//                    pickStorageLocation.launch(null)
+//                } catch (e: ActivityNotFoundException) {
+//                    context.toast(MR.strings.file_picker_error)
+//                }
+//            },
         )
     }
 

@@ -11,11 +11,16 @@ class AndroidStorageFolderProvider(
     private val context: Context,
 ) : FolderProvider {
 
+//    override fun directory(): File {
+//        return File(
+//            Environment.getExternalStorageDirectory().absolutePath + File.separator +
+//                context.stringResource(MR.strings.app_name),
+//        )
+//    }
     override fun directory(): File {
-        return File(
-            Environment.getExternalStorageDirectory().absolutePath + File.separator +
-                context.stringResource(MR.strings.app_name),
-        )
+        return File(context.filesDir, context.stringResource(MR.strings.app_name).toString()).apply {
+            if (!exists()) mkdirs()
+        }
     }
 
     override fun path(): String {
