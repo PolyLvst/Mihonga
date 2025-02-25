@@ -43,7 +43,7 @@ object SettingsBrowseScreen : SearchableSettings {
                 title = stringResource(MR.strings.label_sources),
                 preferenceItems = persistentListOf(
                     Preference.PreferenceItem.SwitchPreference(
-                        pref = sourcePreferences.hideInLibraryItems(),
+                        preference = sourcePreferences.hideInLibraryItems(),
                         title = stringResource(MR.strings.pref_hide_in_library_items),
                     ),
 //                    Preference.PreferenceItem.TextPreference(
