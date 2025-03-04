@@ -83,14 +83,14 @@ object SettingsSecurityScreen : SearchableSettings {
                     preference = securityPreferences.hideNotificationContent(),
                     title = stringResource(MR.strings.hide_notification_content),
                 ),
-                Preference.PreferenceItem.ListPreference(
-                    preference = securityPreferences.secureScreen(),
-                    entries = SecurityPreferences.SecureScreenMode.entries
-                        .associateWith { stringResource(it.titleRes) }
-                        .toImmutableMap(),
-                    title = stringResource(MR.strings.secure_screen),
-                ),
-                Preference.PreferenceItem.InfoPreference(stringResource(MR.strings.secure_screen_summary)),
+//                Preference.PreferenceItem.ListPreference(
+//                    preference = securityPreferences.secureScreen(),
+//                    entries = SecurityPreferences.SecureScreenMode.entries
+//                        .associateWith { stringResource(it.titleRes) }
+//                        .toImmutableMap(),
+//                    title = stringResource(MR.strings.secure_screen),
+//                ),
+//                Preference.PreferenceItem.InfoPreference(stringResource(MR.strings.secure_screen_summary)),
             ),
         )
     }

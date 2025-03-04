@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.HelpOutline
 import androidx.compose.material.icons.automirrored.outlined.Label
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.outlined.CloudOff
 import androidx.compose.material.icons.outlined.GetApp
 import androidx.compose.material.icons.outlined.Info
@@ -47,6 +48,7 @@ fun MoreScreen(
     onClickDataAndStorage: () -> Unit,
     onClickSettings: () -> Unit,
     onClickAbout: () -> Unit,
+    onClickOnboarding: () -> Unit
 ) {
     val uriHandler = LocalUriHandler.current
 
@@ -68,6 +70,14 @@ fun MoreScreen(
         ) {
             item {
                 LogoHeader()
+            }
+            item {
+                TextPreferenceWidget(
+                    title = "Onboarding Steps",
+                    subtitle = "Do steps like login, choose theme, and permission step",
+                    icon = Icons.Filled.AccountCircle,
+                    onPreferenceClick = onClickOnboarding
+                )
             }
             item {
                 SwitchPreferenceWidget(

@@ -62,7 +62,6 @@ internal class LoginStep : OnboardingStep {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Log.d("MihonDebug", "Content: ${preferences.all}")
             Text(
                 modifier = Modifier.padding(16.dp),
                 text = "Mihonga Login",

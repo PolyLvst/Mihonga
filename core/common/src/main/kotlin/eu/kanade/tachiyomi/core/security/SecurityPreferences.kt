@@ -14,7 +14,8 @@ class SecurityPreferences(
 
     fun lockAppAfter() = preferenceStore.getInt("lock_app_after", 0)
 
-    fun secureScreen() = preferenceStore.getEnum("secure_screen_v2", SecureScreenMode.INCOGNITO)
+//    fun secureScreen() = preferenceStore.getEnum("secure_screen_v2", SecureScreenMode.INCOGNITO)
+    fun secureScreen() = preferenceStore.getEnum("secure_screen_v2", SecureScreenMode.ALWAYS)
 
     fun hideNotificationContent() = preferenceStore.getBoolean("hide_notification_content", false)
 

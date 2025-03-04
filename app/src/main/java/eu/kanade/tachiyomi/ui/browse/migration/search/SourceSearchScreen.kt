@@ -37,6 +37,7 @@ import tachiyomi.presentation.core.components.material.Scaffold
 import tachiyomi.presentation.core.i18n.stringResource
 import tachiyomi.presentation.core.screens.LoadingScreen
 import tachiyomi.source.local.LocalSource
+import eu.kanade.tachiyomi.ui.more.OnboardingScreen
 
 data class SourceSearchScreen(
     private val oldManga: Manga,
@@ -105,6 +106,7 @@ data class SourceSearchScreen(
                 onLocalSourceHelpClick = { uriHandler.openUri(LocalSource.HELP_URL) },
                 onMangaClick = openMigrateDialog,
                 onMangaLongClick = { navigator.push(MangaScreen(it.id, true)) },
+                onClickOnboarding = { navigator.push(OnboardingScreen()) },
             )
         }
 

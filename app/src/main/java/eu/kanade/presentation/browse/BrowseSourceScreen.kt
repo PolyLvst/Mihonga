@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.HelpOutline
-import androidx.compose.material.icons.outlined.Public
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHostState
@@ -49,6 +49,7 @@ fun BrowseSourceContent(
     onLocalSourceHelpClick: () -> Unit,
     onMangaClick: (Manga) -> Unit,
     onMangaLongClick: (Manga) -> Unit,
+    onClickOnboarding: () -> Unit
 ) {
     val context = LocalContext.current
 
@@ -93,10 +94,15 @@ fun BrowseSourceContent(
                         onClick = mangaList::refresh,
                     ),
                     EmptyScreenAction(
-                        stringRes = MR.strings.action_open_in_web_view,
-                        icon = Icons.Outlined.Public,
-                        onClick = onWebViewClick,
+                        stringRes = MR.strings.pref_onboarding_guide,
+                        icon = Icons.Filled.AccountCircle,
+                        onClick = onClickOnboarding
                     ),
+//                    EmptyScreenAction(
+//                        stringRes = MR.strings.action_open_in_web_view,
+//                        icon = Icons.Outlined.Public,
+//                        onClick = onWebViewClick,
+//                    ),
                     EmptyScreenAction(
                         stringRes = MR.strings.label_help,
                         icon = Icons.AutoMirrored.Outlined.HelpOutline,
