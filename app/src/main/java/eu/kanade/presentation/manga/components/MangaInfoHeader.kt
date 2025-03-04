@@ -219,15 +219,15 @@ fun MangaActionRow(
             color = if (trackingCount == 0) defaultActionButtonColor else MaterialTheme.colorScheme.primary,
             onClick = onTrackingClicked,
         )
-        if (onWebViewClicked != null) {
-            MangaActionButton(
-                title = stringResource(MR.strings.action_web_view),
-                icon = Icons.Outlined.Public,
-                color = defaultActionButtonColor,
-                onClick = onWebViewClicked,
-                onLongClick = onWebViewLongClicked,
-            )
-        }
+//        if (onWebViewClicked != null) {
+//            MangaActionButton(
+//                title = stringResource(MR.strings.action_web_view),
+//                icon = Icons.Outlined.Public,
+//                color = defaultActionButtonColor,
+//                onClick = onWebViewClicked,
+//                onLongClick = onWebViewLongClicked,
+//            )
+//        }
     }
 }
 

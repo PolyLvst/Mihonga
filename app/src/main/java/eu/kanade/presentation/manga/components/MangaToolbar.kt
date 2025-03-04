@@ -132,14 +132,14 @@ fun MangaToolbar(
                             ),
                         )
                     }
-                    if (onClickShare != null) {
-                        add(
-                            AppBar.OverflowAction(
-                                title = stringResource(MR.strings.action_share),
-                                onClick = onClickShare,
-                            ),
-                        )
-                    }
+//                    if (onClickShare != null) {
+//                        add(
+//                            AppBar.OverflowAction(
+//                                title = stringResource(MR.strings.action_share),
+//                                onClick = onClickShare,
+//                            ),
+//                        )
+//                    }
                 }
                     .build(),
             )

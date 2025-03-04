@@ -120,30 +120,30 @@ fun ReaderAppBars(
                                         onClick = onToggleBookmarked,
                                     ),
                                 )
-                                onOpenInWebView?.let {
-                                    add(
-                                        AppBar.OverflowAction(
-                                            title = stringResource(MR.strings.action_open_in_web_view),
-                                            onClick = it,
-                                        ),
-                                    )
-                                }
-                                onOpenInBrowser?.let {
-                                    add(
-                                        AppBar.OverflowAction(
-                                            title = stringResource(MR.strings.action_open_in_browser),
-                                            onClick = it,
-                                        ),
-                                    )
-                                }
-                                onShare?.let {
-                                    add(
-                                        AppBar.OverflowAction(
-                                            title = stringResource(MR.strings.action_share),
-                                            onClick = it,
-                                        ),
-                                    )
-                                }
+//                                onOpenInWebView?.let {
+//                                    add(
+//                                        AppBar.OverflowAction(
+//                                            title = stringResource(MR.strings.action_open_in_web_view),
+//                                            onClick = it,
+//                                        ),
+//                                    )
+//                                }
+//                                onOpenInBrowser?.let {
+//                                    add(
+//                                        AppBar.OverflowAction(
+//                                            title = stringResource(MR.strings.action_open_in_browser),
+//                                            onClick = it,
+//                                        ),
+//                                    )
+//                                }
+//                                onShare?.let {
+//                                    add(
+//                                        AppBar.OverflowAction(
+//                                            title = stringResource(MR.strings.action_share),
+//                                            onClick = it,
+//                                        ),
+//                                    )
+//                                }
                             }
                             .build(),
                     )

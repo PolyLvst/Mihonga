@@ -75,12 +75,12 @@ fun BrowseSourceToolbar(
                                 ),
                             )
                         } else {
-                            add(
-                                AppBar.OverflowAction(
-                                    title = stringResource(MR.strings.action_open_in_web_view),
-                                    onClick = onWebViewClick,
-                                ),
-                            )
+//                            add(
+//                                AppBar.OverflowAction(
+//                                    title = stringResource(MR.strings.action_open_in_web_view),
+//                                    onClick = onWebViewClick,
+//                                ),
+//                            )
                         }
                         if (isConfigurableSource) {
                             add(
